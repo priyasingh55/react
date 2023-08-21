@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import ExpenseItem from './expenseTracker/ExpenseItem';
 
 // export default function App() {
 //   return (
@@ -12,11 +12,18 @@ import "./style.css";
 
 
  export default function App(){
+      let expenseDate = new Date(2023,5,8);
+      let expenseTitle = "School fee";
+      let expenseAmount =300;
+
   return (
     <>
-    <h1>First Component</h1>
-    <p>i m a paragraph tag</p>
-
+    <h2>Let's get started</h2>
+    <ExpenseItem> 
+      date={expenseDate} 
+      title={expenseTitle} 
+      amount={expenseAmount}
+       </ExpenseItem>
  </>
   )
  }
